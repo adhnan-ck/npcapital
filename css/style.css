@@ -54,6 +54,18 @@ Table of Content:
   padding: 0px;
 }
 
+html.is-changing .transition-fade {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
 a {
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -613,6 +625,7 @@ button:focus {
 }
 
 .text-animate {
+  z-index: -1;
   list-style: none;
 
   --height: 3.8rem;
@@ -623,6 +636,7 @@ button:focus {
 }
 
 .text-animate li {
+  z-index: -1;
    animation: slide-up 11s;
 }
 
