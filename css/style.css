@@ -241,10 +241,10 @@ button:focus {
   font-size: 14px;
   font-weight: 500;
   line-height: 30px;
-  background: #00ff37;
-  color: #0c0000;
+  background:gray;
+  color: #ffffff;
   text-transform: uppercase;
-  padding: 5px 29px;
+  padding: 5px 39px;
 }
 
 .book_now_btn {
@@ -333,7 +333,7 @@ button:focus {
 }
 
 .navbar {
-  background: #0d050100;
+  background: #ffffff;
   padding: 0px 25px;
 }
 
@@ -426,7 +426,7 @@ button:focus {
 
 .navbar .menu_nav .nav-item.submenu ul .nav-item .nav-link {
   line-height: 45px;
-  color: #ff0202;
+  color: #867b7b;
   padding: 0px 30px;
   -webkit-transition: all 150ms linear;
   -o-transition: all 150ms linear;
@@ -459,7 +459,7 @@ button:focus {
 }
 
 .menu_two {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255, 255, 255);
 }
 
 .menu_two .menu_nav .nav-item .nav-link {
@@ -494,6 +494,49 @@ button:focus {
   background: rgba(34, 34, 34, 0.9);
 }
 
+.dropdown_menu-5 .dropdown_item-1 {
+  transform-origin: top center;
+  animation: translateX 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown_menu-5 .dropdown_item-2 {
+  transform-origin: top center;
+  animation: translateX 300ms 120ms ease-in-out forwards;
+}
+
+.dropdown_menu-5 .dropdown_item-3 {
+  transform-origin: top center;
+  animation: translateX 300ms 180ms ease-in-out forwards;
+}
+
+.dropdown_menu-5 .dropdown_item-4 {
+  transform-origin: top center;
+  animation: translateX 300ms 240ms ease-in-out forwards;
+}
+
+.dropdown_menu-5 .dropdown_item-5 {
+  transform-origin: top center;
+  animation: translateX 300ms 300ms ease-in-out forwards;
+}
+
+@keyframes translateX {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  80% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============= Start banner_area css =============*/
@@ -511,7 +554,7 @@ button:focus {
 @media (max-width:768px) {
    
   .banner_area .bg-parallax {
-    background: url("../image/banner_bg_mobile.png") no-repeat scroll center 0/cover;
+    background: url("../image/banner_bg_mobile.jpeg") no-repeat scroll center 0/cover;
     /* opacity: 0.90; */
   }
 
