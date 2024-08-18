@@ -34,7 +34,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.jpg" alt="" width="140rem" height="40rem"></a>
+                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.jpg" alt="" width="100rem" height="40rem"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span style="background-color: black;" class="icon-bar"></span>
                         <span style="background-color: black;" class="icon-bar"></span>
@@ -105,15 +105,15 @@
                         </div>
                         <div class="col-md-9">
                             <div class="boking_table">
-                                <form action="#">
+                                <form id="contact-form">
 									<div class="mt-10">
 										<input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
 									</div>
                                     <div class="mt-10">
-										<input type="text" name="first_name" placeholder="Second Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Second Name'" required class="single-input">
+										<input type="text" name="second_name" placeholder="Second Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Second Name'" required class="single-input">
 									</div>
                                     <div class="mt-10">
-										<input type="text" name="first_name" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required class="single-input">
+										<input type="text" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required class="single-input">
 									</div>
 
                                 </div>
@@ -186,9 +186,31 @@
             </div>
         </footer>
 		<!--================ End footer Area  =================-->
+
+        <!-- message send script -->
+        <script type="text/javascript">
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+          
+              emailjs.sendForm('service_vuakng', 'template_p1chxgn', this)
+                .then(function() {
+                  alert('SUCCESS!');
+                }, function(error) {
+                  alert('FAILED...', error);
+                });
+            });
+          </script>
+          
         
         
         <!-- Optional JavaScript -->
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("Xal_cS1xDJujuGVH_");
+  })();
+</script>
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.js"></script>
