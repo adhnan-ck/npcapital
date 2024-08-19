@@ -105,7 +105,7 @@
                         </div>
                         <div class="col-md-9">
                             <div class="boking_table">
-                                <form id="contact-form">
+                                <form id="contact-form" >
 									<div class="mt-10">
 										<input type="text" name="first_name" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required class="single-input">
 									</div>
@@ -118,7 +118,7 @@
 
                                 </div>
                                 <div class="mt-10">
-                                    <input class="button_hover theme_btn_two radius"  type="submit" >
+                                    <input id="submitButton" class="button_hover theme_btn_two radius"  type="submit" >
                                 </div>
                                     
                                 </form>
@@ -193,9 +193,13 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
               event.preventDefault();
           
+              const submitButton = document.getElementById('submitButton'); // Get the submit button element
+          
               emailjs.sendForm('service_bua1ghp', 'template_kkwmy2y', this)
                 .then(function() {
                   alert('SUCCESS!');
+                  submitButton.classList.add('success'); // Change button color on success
+                  submitButton.disabled = true; // Optionally disable the button after submission
                 }, function(error) {
                   alert('FAILED...', error);
                 });

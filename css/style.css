@@ -669,6 +669,12 @@ button:focus {
   
 }
 /*============= End banner_area css =============*/
+
+#submitButton.success{
+  background-color: green;
+}
+
+
 .hotel_booking_table {
   background: #04091e;
   -webkit-box-align: center;
