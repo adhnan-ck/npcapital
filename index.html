@@ -173,6 +173,7 @@
                         <div class="single-footer-widget">
                             <h6 class="footer_title">CONTACT</h6>
                             <a href="mailto:npcapital@outlook.con"><p style="color: gray;">npcapital@outlook.com</p></a>
+                            <a style="color: gray;" href="https://www.instagram.com/np.capital/?igsh=MWNlMW5oOXRpMzJmZQ%3D%3D"><i style="color: rgb(255, 2, 167);" class="fa fa-instagram"></i> np.capital</a>
                         </div>
                     </div>	
                 </div>
@@ -199,12 +200,13 @@
               event.preventDefault();
           
               const submitButton = document.getElementById('submitButton'); // Get the submit button element
-          
+              submitButton.classList.add('success'); // Change button color on success
               emailjs.sendForm('service_bua1ghp', 'template_kkwmy2y', this)
                 .then(function() {
+        
                   alert('SUCCESS!');
-                  submitButton.classList.add('success'); // Change button color on success
                   submitButton.disabled = true; // Optionally disable the button after submission
+                  document.getElementById('contact-form').reset(); 
                 }, function(error) {
                   alert('FAILED...', error);
                 });
